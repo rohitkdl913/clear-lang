@@ -1,0 +1,41 @@
+{
+    "tasks": [
+        {
+            "label": "cmake",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}/build"
+            },
+            "command": "cmake -DCMAKE_BUILD_TYPE=Debug ../",
+
+        },
+        {
+            "label": "make",
+            "type": "shell",
+            "command": "make",
+            "options": {
+                "cwd": "${workspaceRoot}/build"
+            },
+
+            "dependsOn":["cmake"]
+        },
+
+        {
+            "label": "build",
+            "type": "cppbuild",
+            "options": {
+                "cwd": "${workspaceRoot}/build"
+            },
+            "command": "echo",
+            "args": [
+                "Build sucessfully"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": ["make"]
+        }
+    ],
+    "version": "2.0.0"
+    }

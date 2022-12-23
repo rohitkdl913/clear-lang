@@ -1,0 +1,9 @@
+fun functionName(a:i32,c:i32,b:i32){
+   let d:i32=24*3
+   if d==c {
+    
+   }
+}
+
+
+    
